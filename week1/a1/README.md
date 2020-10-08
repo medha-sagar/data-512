@@ -1,6 +1,6 @@
 
 # DATA 512 - Human Centered Data Science
-## Assignemnet 1 : Data Curation
+## Assignment 1 : Data Curation
 ### Introduction
 
 The goal of this assignment is to construct, analyze, and publish a dataset of monthly traffic on English Wikipedia from January 1 2008 through August 30 2020. All analysis should be performed in a single Jupyter notebook and all data, documentation, and code should be published in a single GitHub repository.
