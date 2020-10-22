@@ -27,11 +27,6 @@ Wulczyn, Ellery; Thain, Nithum; Dixon, Lucas (2017): Wikipedia Talk Corpus. figs
 - output : Directory containing all visualizations
 - data: Directory containing all data
 
-
-### Visualization
-
-![image](output//Aggression Distribution by Gender.png)
-
 #### License
 
  [MIT LICENSE](https://opensource.org/licenses/MIT)
