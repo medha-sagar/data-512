@@ -1,19 +1,19 @@
 
 # DATA 512 - Human Centered Data Science
-## Assignment 1 : Data Curation
+## Assignment 2 : Bias in Data
 ### Introduction
 
-The goal of this assignment is to construct, analyze, and publish a dataset of monthly traffic on English Wikipedia from January 1 2008 through August 30 2020. All analysis should be performed in a single Jupyter notebook and all data, documentation, and code should be published in a single GitHub repository.
-
-The purpose of the assignment is to start to familiarize you with the Jupyter Notebook environment and with some best practices for open scientific research in designing and implementing your project, and make your project fully reproducible by others: from data collection to data analysis.
+The goal is to identify potential sources of bias in a corpus of human-annotated data, and describe some implications of those biases. The corpus used iscalled the Wikipedia Talk corpus, and it consists of three datasets. Each dataset contains thousands of online discussion posts made by Wikipedia editors who were discussing how to write and edit Wikipedia articles. Crowdworkers labelled these posts for three kinds of hostile speech: “toxicity”, “aggression”, and “personal attacks”. Many posts in each dataset were labelled by multiple crowdworkers for each type of hostile speech, to improve accuracy.
+For the purpose of this explatory analysis, the datasets used are:
+Toxicity - 160k labeled comments from English Wikipedia by approximately 10 annotators via Crowdflower on a spectrum of how toxic the comment is (perceived as likely to make people want to leave the discussion) to how healthy to conversation the contribution is.
+Aggression - 100k labeled comments from English Wikipedia by approximately 10 annotators via Crowdflower on how aggressive the comment was perceived to be along with some demographic data for each crowd-worker.
 
 ### Data
 
-- The Legacy Pagecounts API (documentation (https://wikitech.wikimedia.org/wiki/Analytics/AQS/Legacy_Pagecounts) , endpoint (https://wikimedia.org/api/rest_v1/#!/Pagecounts_data_(legacy)/get_metrics_legacy_pagecounts_aggregate_project_access_site_granularity_start_end) ) provides access to desktop and mobile traffic data from December 2007 through July 2016.
+This data can be found on [Figshare](https://figshare.com/articles/dataset/Wikipedia_Talk_Corpus/4264973) .
 
-- The Pageviews API (documentation (https://wikitech.wikimedia.org/wiki/Analytics/AQS/Pageviews), endpoint (https://wikimedia.org/api/rest_v1/#!/Pageviews_data/get_metrics_pageviews_aggregate_project_access_agent_granularity_start_end)) provides access to desktop, mobile web, and mobile app traffic data from July 2015 through last month.
-
-Terms of use: https://www.mediawiki.org/wiki/REST_API#Terms_and_conditions
+Cite
+Wulczyn, Ellery; Thain, Nithum; Dixon, Lucas (2017): Wikipedia Talk Corpus. figshare. Dataset. https://doi.org/10.6084/m9.figshare.4264973.v3
 
 ### Packages
 
@@ -24,33 +24,13 @@ Terms of use: https://www.mediawiki.org/wiki/REST_API#Terms_and_conditions
 
 ### Files
 
-- EN_WIKI_VIEWS.png : Final visualization file
-- en-wikipedia_traffic_200712-202008.csv: Consolidated data for all pageviews from legacy system (including spiders and crawlers)
-- pagecounts_desktop-site_200801-202008.json: Pageviews data from legacy system from desktop channel (including spiders and crawlers)
-- pagecounts_mobile-site_200801-202008.json: Pageviews data from legacy system from mobile channel (including spiders and crawlers)
-- pageviews_desktop_200801-202008.json: Pageviews data from new system from desktop channel 
-- pageviews_mobile-app_200801-202008.json: Pageviews data from new system from mobile app channel 
-- pageviews_mobile-web_200801-202008.json: ageviews data from new system from mobile web channel 
-
-### Installation
-
-Data Dictionary for en-wikipedia_traffic_200712-202008.csv:
-
-| Column | Description |
-| ------ | ------ |
-| year | Year |
-| month | Month |
-| pagecount_all_views | Total views from legacy system |
-| pagecount_desktop_views | Total views from legacy system (desktop) |
-| pagecount_mobile_views | Total views from legacy system (mobile) |
-| pageview_all_views | Total views from new system  |
-| pageview_desktop_views | Total views from new system (desktop) |
-| pageview_mobile_views | Total views from new system (mobile) |
+- output : Directory containing all visualizations
+- data: Directory containing all data
 
 
 ### Visualization
 
-![image](EN_WIKI_VIEWS.png)
+![image](output/Aggression Distribution by Gender.png)
 
 #### License
 
